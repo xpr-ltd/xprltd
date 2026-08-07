@@ -76,7 +76,7 @@ export default function CoursesSection({ onOpenModal }: CoursesSectionProps) {
       badge: "INSTITUTIONAL",
       badgeColor: "text-[#070907] border-[#00FF87] bg-[#00FF87]",
       image: "/images/kids_stem.png",
-      rating: "4.9 / 5.0 (45+ Schools)",
+      rating: "4.9 / 5.0 (20+ Schools)",
       curriculum: [
         "Designing Modern School Computer Labs",
         "Teaching Python & Robotics to K-12 Students",

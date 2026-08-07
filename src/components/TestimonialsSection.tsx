@@ -29,50 +29,6 @@ export default function TestimonialsSection() {
       tag: "PARENTS & YOUTH",
       tagColor: "text-[#FFE600] border-[#FFE600]/30 bg-[#FFE600]/10",
     },
-    {
-      id: 3,
-      name: "Dr. Kalu Ndukwe",
-      role: "Principal, Crestview International Academy",
-      category: "schools",
-      quote:
-        "Xpr Nigeria Limited helped us establish a state-of-the-art STEM & Robotics laboratory for our secondary students. Their curriculum integration and teacher training workshops elevated our school to one of the top tech-forward institutions in Abuja.",
-      rating: 5,
-      tag: "SCHOOL PARTNERSHIP",
-      tagColor: "text-[#00FF87] border-[#00FF87]/30 bg-[#00FF87]/10",
-    },
-    {
-      id: 4,
-      name: "Amina Yusuf",
-      role: "Full-Stack Developer @ Global Remote Firm",
-      category: "bootcamp",
-      quote:
-        "The 1-on-1 career counseling and portfolio review sessions at Xpr were game-changing. They audited my GitHub, revamped my technical resume, and taught me how to tackle international coding interviews with confidence.",
-      rating: 5,
-      tag: "CAREER MENTORSHIP",
-      tagColor: "text-[#FFE600] border-[#FFE600]/30 bg-[#FFE600]/10",
-    },
-    {
-      id: 5,
-      name: "Emeka Dan-Jumbo",
-      role: "CTO, Agrotech Enterprise",
-      category: "schools",
-      quote:
-        "We engaged Xpr Technologies for bespoke AI research and computer vision solution development. Their team delivered an accurate crop disease diagnostic engine on schedule. Truly exceptional engineering standard right here in Nigeria.",
-      rating: 5,
-      tag: "ENTERPRISE R&D",
-      tagColor: "text-[#00FF87] border-[#00FF87]/30 bg-[#00FF87]/10",
-    },
-    {
-      id: 6,
-      name: "Blessing & David Sanusi",
-      role: "Parents of 12 & 14 Year-Old Coding Duo",
-      category: "parents",
-      quote:
-        "Both of our kids participated in the Xpr Summer Coding Bootcamp. Seeing them present their Python projects at the end-of-program exhibition made us so proud. Xpr is building real tech confidence in Nigerian youth!",
-      rating: 5,
-      tag: "PARENTS & YOUTH",
-      tagColor: "text-[#FFE600] border-[#FFE600]/30 bg-[#FFE600]/10",
-    },
   ];
 
   const filtered =
@@ -83,7 +39,7 @@ export default function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-24 bg-[#070907] relative border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Tag */}
         <div className="flex items-center gap-3 mb-6">
           <span className="text-xs font-mono font-bold text-[#00FF87] uppercase tracking-widest">
@@ -109,11 +65,10 @@ export default function TestimonialsSection() {
             <button
               key={tab.id}
               onClick={() => setFilter(tab.id as any)}
-              className={`px-4 py-2 rounded-full text-xs font-mono font-bold transition-all ${
-                filter === tab.id
+              className={`px-4 py-2 rounded-full text-xs font-mono font-bold transition-all ${filter === tab.id
                   ? "bg-[#00FF87] text-[#070907] shadow-md"
                   : "bg-white/5 border border-white/10 text-slate-300 hover:text-white"
-              }`}
+                }`}
             >
               {tab.label}
             </button>

@@ -68,8 +68,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${jetbrains.variable} dark scroll-smooth`}>
-      <body className="bg-[#070a08] text-slate-100 font-sans selection:bg-[#10b981] selection:text-black antialiased">
+    <html lang="en" className={`${jakarta.variable} ${jetbrains.variable} scroll-smooth`}>
+      <body className="bg-[color:var(--paper)] text-[color:var(--ink)] font-sans selection:bg-[#10B981] selection:text-white antialiased">
         {children}
       </body>
     </html>

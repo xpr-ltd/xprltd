@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0A0E0F;
-  --ink-soft: #111818;
-  --paper: #F5F9F6;
-  --paper-soft: #E6EFEA;
-  --accent: #10B981;
-  --accent-2: #059669;
-  --yellow: #FFE600;
-  --muted-on-dark: #A3B8B1;
-  --muted-on-light: #4D665D;
-  --line-on-dark: rgba(245, 249, 246, 0.12);
-  --line-on-light: rgba(10, 14, 15, 0.10);
+  --ink: #064E3B;
+  --ink-soft: #0F766E;
+  --paper: #FFFFFF;
+  --paper-soft: #F0FDF4;
+  --accent: #059669;
+  --accent-2: #10B981;
+  --accent-3: #047857;
+  --yellow: #059669;
+  --muted-on-dark: #ECFDF5;
+  --muted-on-light: #374151;
+  --line-on-dark: rgba(255, 255, 255, 0.2);
+  --line-on-light: rgba(5, 150, 105, 0.15);
 }
 
 html {
@@ -20,14 +21,14 @@ html {
 }
 
 body {
-  background-color: var(--paper);
-  color: var(--ink);
+  background-color: #FFFFFF;
+  color: #064E3B;
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: var(--yellow);
-  color: #000000;
+  background-color: #059669;
+  color: #FFFFFF;
 }
 
 @keyframes marquee {
@@ -50,9 +51,12 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--paper);
+  background: #F0FDF4;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-2);
+  background: #059669;
   border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #047857;
 }

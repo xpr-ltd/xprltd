@@ -34,21 +34,25 @@ export default function WorkShowcase({ onOpenModal }: WorkShowcaseProps) {
             </h2>
           </div>
 
-          <button
-            onClick={() => onOpenModal("enroll", "AI for Kids Book Order")}
-            className="px-6 py-3 rounded-full border border-[color:var(--line-on-light)] hover:border-[color:var(--accent-2)] bg-[color:var(--paper)] text-xs font-mono font-bold text-[color:var(--ink)] transition-all self-start md:self-auto"
+          <a
+            href="https://akidsguide.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-full border border-[color:var(--line-on-light)] hover:border-[color:var(--accent-2)] bg-[color:var(--paper)] text-xs font-mono font-bold text-[color:var(--ink)] transition-all self-start md:self-auto inline-flex items-center gap-2"
           >
-            Order Copy / Enroll ↗
-          </button>
+            <span>Explore Publication</span> ↗
+          </a>
         </div>
 
         {/* Single Featured Card */}
         <div className="grid grid-cols-1 gap-8">
           {projects.map((p) => (
-            <div
+            <a
               key={p.id}
-              className="bg-[color:var(--paper)] p-8 sm:p-12 rounded-3xl border border-[color:var(--line-on-light)] flex flex-col lg:flex-row items-center gap-10 group cursor-pointer hover:shadow-xl transition-all"
-              onClick={() => onOpenModal("enroll", p.title)}
+              href="https://akidsguide.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[color:var(--paper)] p-8 sm:p-12 rounded-3xl border border-[color:var(--line-on-light)] flex flex-col lg:flex-row items-center gap-10 group cursor-pointer hover:shadow-xl transition-all block"
             >
               <div className="relative h-80 lg:h-96 w-full lg:w-1/2 rounded-2xl overflow-hidden border border-[color:var(--line-on-light)] flex-shrink-0">
                 <Image
@@ -79,14 +83,14 @@ export default function WorkShowcase({ onOpenModal }: WorkShowcaseProps) {
 
                 <div className="pt-6 border-t border-[color:var(--line-on-light)] flex items-center justify-between">
                   <span className="text-sm font-mono font-bold text-[color:var(--accent-2)] group-hover:text-[color:var(--ink)] transition-colors">
-                    {p.linkText}
+                    Explore Publication ↗
                   </span>
                   <div className="w-12 h-12 rounded-full bg-[color:var(--accent-2)] text-white group-hover:bg-[#FFE600] group-hover:text-[#0A0E0F] flex items-center justify-center transition-all">
                     <HiArrowUpRight className="text-xl stroke-[2]" />
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

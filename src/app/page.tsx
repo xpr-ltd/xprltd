@@ -67,9 +67,9 @@ const viewportOnce = {
  * Data – Xpr Nigeria Limited Copy & Media
  * ---------------------------------------------------------------------- */
 const STATS = [
-  { value: "50+", label: "AI & Digital Solutions" },
-  { value: "12,000+", label: "Students & Kids Empowered" },
-  { value: "45+", label: "Partner Schools & Firms" },
+  { value: "30+", label: "AI & Digital Solutions" },
+  { value: "1,500+", label: "Students & Kids Empowered" },
+  { value: "20+", label: "Partner Schools & Firms" },
   { value: "99.2%", label: "Satisfaction & Support" },
 ];
 
@@ -141,28 +141,22 @@ const PROCESS = [
 
 const TESTIMONIALS = [
   {
-    name: "Chidubem Okafor",
-    role: "AI Engineer @ FinTech Hub",
+    name: "Chukwuma Akaogu",
+    role: "Junior Tech Student (MAD-4J & AI4J Alumnus)",
     quote:
-      "Xpr Technologies completely transformed my career trajectory. Their intensive AI bootcamp bridged theory and enterprise code. Within 2 months, I landed an AI Engineer role in Lagos!",
+      "“Learning mobile app development and generative AI at Xpr Technologies completely changed how I look at technology. Under instructor Omole Oladele's guidance, I built my very first mobile UI prototype. Xpr makes complex AI concepts practical, fun, and easy to understand!”",
   },
   {
-    name: "Mrs. Folake Adebayo",
-    role: "Parent of 10-Year-Old STEM Student",
+    name: "Chidubem Akaogu",
+    role: "Young Innovator (AI4K Graduate)",
     quote:
-      "Enrolling my son in the Xpr Young Innovators STEM Academy was the best decision. He went from playing games to building his own Scratch games and robotics!",
+      "“The AI for Kids (AI4K) program was the best learning experience of my year! I learned block coding, computational logic, and how to program micro-robots to solve real puzzles. The hands-on projects made me super confident in STEM.”",
   },
   {
-    name: "Dr. Kalu Ndukwe",
-    role: "Principal, Crestview International Academy",
+    name: "Omole Oladele",
+    role: "Lead Instructor & Director of Learning, XTL",
     quote:
-      "Xpr Nigeria Limited helped us establish a state-of-the-art STEM & Robotics lab. Their curriculum and teacher training elevated our school to top tech status in Abuja.",
-  },
-  {
-    name: "Amina Yusuf",
-    role: "Full-Stack Developer @ Global Firm",
-    quote:
-      "The 1-on-1 career counseling and portfolio review sessions at Xpr were game-changing. They audited my GitHub and taught me how to tackle international coding interviews.",
+      "“Our core mission at Xpr Technologies Limited is to bridge original AI research with early-stage technical literacy. Watching young minds like Chukwuma and Chidubem grasp complex computational logic and build real digital products validates our commitment to raising Africa's next generation of tech leaders.”",
   },
 ];
 
@@ -189,13 +183,6 @@ const COURSES = [
       "Generative AI learning program empowering juniors aged 11–15 to understand neural networks, prompt design, and responsible AI usage.",
   },
   {
-    image: "/images/course_unbordered.png",
-    title: "Unbordered Path — Secondary School Career Support",
-    badge: "CAREER PLATFORM // 2025",
-    excerpt:
-      "A remote career support platform and mentorship pathway for secondary school leavers transitioning into tech careers and university.",
-  },
-  {
     image: "/images/course_lyceum.png",
     title: "Lyceum DCE — Digital Capacity Enhancement",
     badge: "SCHOOL INTEGRATION // PORT HARCOURT",
@@ -204,10 +191,10 @@ const COURSES = [
   },
   {
     image: "/images/course_prompt_eng.png",
-    title: "Prompt Engineering for Professionals",
-    badge: "SPECIAL TRAINING // 2024",
+    title: "AI for Professionals",
+    badge: "EXECUTIVE TRAINING // 2025",
     excerpt:
-      "Intensive training program for professionals on how to effectively apply Generative AI workflows and prompt engineering in daily work.",
+      "Intensive training program for corporate leaders and working professionals on how to effectively apply Generative AI workflows, prompt engineering, and digital tools in daily work.",
   },
 ];
 
@@ -414,25 +401,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              <motion.div
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={viewportOnce}
-                className="grid grid-cols-2 gap-8 border-t border-[color:var(--line-on-light)] pt-10 sm:grid-cols-4"
-              >
-                {STATS.map((stat) => (
-                  <motion.div key={stat.label} variants={fadeInUp}>
-                    <p className="font-extrabold text-3xl sm:text-4xl tracking-tight text-[color:var(--ink)]">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-xs text-[color:var(--muted-on-light)] font-mono uppercase">
-                      {stat.label}
-                    </p>
-                  </motion.div>
-                ))}
-              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -454,12 +422,6 @@ export default function Home() {
                 Real projects, real impact for African brands.
               </h2>
             </div>
-            <button
-              onClick={() => handleOpenModal("consultation", "Selected Work Archive")}
-              className="font-mono text-xs uppercase tracking-[0.14em] text-[color:var(--ink)] underline decoration-[color:var(--line-on-light)] underline-offset-8 hover:decoration-[color:var(--accent)] font-bold text-left"
-            >
-              View full archive (17+) →
-            </button>
           </motion.div>
 
           <motion.div
@@ -470,11 +432,13 @@ export default function Home() {
             className="flex flex-col gap-10 md:flex-row md:flex-wrap md:items-start md:justify-between md:gap-y-14"
           >
             {WORKS.map((item) => (
-              <motion.div
+              <motion.a
                 key={item.title}
                 variants={fadeInUp}
-                onClick={() => handleOpenModal("consultation", item.title)}
-                className={`group relative w-full ${item.widthClass} cursor-pointer`}
+                href="https://akidsguide.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group relative w-full ${item.widthClass} cursor-pointer block`}
               >
                 <div className={`relative mb-5 w-full overflow-hidden rounded-2xl bg-[#0A0E0F] ${item.aspect} border border-[color:var(--line-on-light)]`}>
                   <motion.div variants={imageReveal} className="relative h-full w-full">
@@ -490,28 +454,34 @@ export default function Home() {
                       {item.category}
                     </span>
                   </div>
-                  <div className="absolute right-4 top-4 flex h-10 w-10 translate-y-2 items-center justify-center rounded-full bg-[color:var(--paper)] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <div className="absolute right-4 top-4 flex h-10 w-10 translate-y-2 items-center justify-center rounded-full bg-[color:var(--paper)] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 shadow-md">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                       <path d="M1 13 13 1M13 1H4M13 1v9" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                 </div>
-                <div className="max-w-[538px]">
-                  <h3 className="mb-2 font-extrabold text-2xl tracking-tight text-[color:var(--ink)] group-hover:text-[color:var(--accent-2)] transition-colors">
+                <div className="max-w-[620px] space-y-3">
+                  <h3 className="font-extrabold text-2xl sm:text-3xl tracking-tight text-[color:var(--ink)] group-hover:text-[color:var(--accent-2)] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-sm sm:text-base leading-[160%] text-[color:var(--muted-on-light)]">
                     {item.description}
                   </p>
+                  <div className="pt-2">
+                    <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#059669] text-white font-mono text-xs font-bold group-hover:bg-[#047857] transition-all shadow-md">
+                      <span>Explore Publication</span>
+                      ↗
+                    </span>
+                  </div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* ===================== DIGITAL INFRASTRUCTURE CTA ===================== */}
-      <section className="relative overflow-hidden bg-[color:var(--ink)] px-6 py-24 md:px-10 md:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#064E3B] via-[#047857] to-[#065F46] px-6 py-24 md:px-10 md:py-32 border-y border-emerald-800">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-14 md:grid-cols-12">
           <motion.div
             variants={fadeInUp}
@@ -521,15 +491,15 @@ export default function Home() {
             className="md:col-span-7"
           >
             <Eyebrow>Digital infrastructure & R&D</Eyebrow>
-            <h2 className="mt-5 font-extrabold text-3xl sm:text-5xl tracking-tight text-[color:var(--paper)]">
+            <h2 className="mt-5 font-extrabold text-3xl sm:text-5xl tracking-tight text-white">
               We build the system once, so your team never has to guess twice.
             </h2>
-            <p className="mt-6 max-w-[520px] text-base leading-[170%] text-[color:var(--muted-on-dark)]">
+            <p className="mt-6 max-w-[520px] text-base leading-[170%] text-emerald-100">
               From responsive web apps and AI decision engines to K-12 school STEM labs, we deliver end-to-end technology solutions that grow with your business. Code standards, AI pipelines, and curriculum documented and handed off cleanly.
             </p>
             <a
-              href="mailto:contact@xprtechnologies.com?subject=Digital%20Infrastructure%20%26%20Service%20Inquiry%20-%20Xpr%20Technologies"
-              className="mt-10 inline-flex items-center gap-3 rounded-full bg-[color:var(--accent)] hover:bg-[#00FF87] hover:text-[#070907] px-7 py-4 font-mono text-xs uppercase tracking-[0.14em] text-white font-extrabold transition-all hover:scale-105"
+              href="mailto:xprng.ltd@gmail.com?subject=Digital%20Infrastructure%20%26%20Service%20Inquiry%20-%20Xpr%20Technologies"
+              className="mt-10 inline-flex items-center gap-3 rounded-full bg-white hover:bg-emerald-50 px-7 py-4 font-mono text-xs uppercase tracking-[0.14em] text-[#064E3B] font-extrabold transition-all hover:scale-105 shadow-xl"
             >
               Explore our services ↗
             </a>
@@ -545,10 +515,10 @@ export default function Home() {
             <TerminalFrame
               path="~/xpr/tokens.css"
               lines={[
-                "--ink: #0A0E0F;",
-                "--paper: #F5F9F6;",
-                "--accent: #10B981;",
-                "--yellow: #FFE600;",
+                "--ink: #064E3B;",
+                "--paper: #FFFFFF;",
+                "--accent: #059669;",
+                "--theme: GREEN_WHITE;",
                 "--status: KICKOFF_24H;",
               ]}
             />
@@ -723,7 +693,7 @@ export default function Home() {
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                     />
                     <div className="absolute top-3 left-3">
-                      <span className="px-3 py-1 rounded-md bg-[#0A0E0F]/90 text-[color:var(--yellow)] border border-white/10 text-[10px] font-mono font-bold">
+                      <span className="px-3 py-1 rounded-md bg-[#059669]/90 text-white border border-white/20 text-[10px] font-mono font-bold shadow-md">
                         {course.badge}
                       </span>
                     </div>

@@ -36,35 +36,33 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "py-4 bg-[#0A0E0F]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl"
-            : "py-6 bg-transparent"
+            ? "py-3.5 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm"
+            : "py-5 bg-white/80 backdrop-blur-md border-b border-gray-100/40"
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 md:px-10">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3 group">
-              <div className="relative w-9 h-9 overflow-hidden rounded-xl bg-white/5 border border-white/10 group-hover:scale-105 transition-transform flex items-center justify-center p-1">
-                <img
-                  src="/images/logo_main.png"
-                  alt="XPR Technologies Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+            <a href="#" className="flex items-center gap-3.5 group">
+              <img
+                src="/images/logo_main.png"
+                alt="XPR Technologies Logo"
+                className="h-11 w-auto object-contain group-hover:scale-105 transition-transform"
+              />
               <div className="flex flex-col">
-                <span className="font-extrabold text-base tracking-tight text-white group-hover:text-[#10B981] transition-colors">
-                  XPR <span className="text-[#10B981]">TECHNOLOGIES</span>
+                <span className="font-extrabold text-lg tracking-tight text-[#064E3B] group-hover:text-[#059669] transition-colors">
+                  XPR <span className="text-[#059669]">TECHNOLOGIES</span>
                 </span>
               </div>
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-1 bg-[#111818]/90 border border-white/10 rounded-full px-5 py-2 backdrop-blur-md">
+            <nav className="hidden md:flex items-center gap-1 bg-emerald-50/60 rounded-full px-5 py-2 backdrop-blur-md">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200"
+                  className="px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#064E3B] hover:text-[#059669] hover:bg-white rounded-full transition-all duration-200"
                 >
                   {link.name}
                 </a>
@@ -75,13 +73,13 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href="mailto:xprng.ltd@gmail.com?subject=Work%20With%20Us%20Inquiry%20-%20Xpr%20Technologies"
-                className="px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider text-slate-300 hover:text-white border border-white/15 hover:border-white/40 rounded-full transition-all duration-200 bg-white/5 inline-flex items-center justify-center"
+                className="px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider text-[#064E3B] hover:text-[#059669] rounded-full transition-all duration-200 bg-emerald-50 hover:bg-emerald-100 inline-flex items-center justify-center"
               >
                 Work With Us
               </a>
               <button
                 onClick={() => onOpenModal("enroll")}
-                className="px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider text-[#0A0E0F] bg-[#FFE600] hover:bg-yellow-300 rounded-full shadow-md transition-all hover:scale-105"
+                className="px-5 py-2.5 text-xs font-mono font-extrabold uppercase tracking-wider text-white bg-[#059669] hover:bg-[#047857] rounded-full shadow-md transition-all hover:scale-105"
               >
                 Explore Courses ↗
               </button>
@@ -91,13 +89,13 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
             <div className="flex md:hidden items-center gap-2">
               <button
                 onClick={() => onOpenModal("enroll")}
-                className="px-3.5 py-1.5 text-[11px] font-mono font-extrabold text-[#0A0E0F] bg-[#FFE600] rounded-full"
+                className="px-3.5 py-1.5 text-[11px] font-mono font-extrabold text-white bg-[#059669] rounded-full"
               >
                 Courses
               </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-slate-300 hover:text-white rounded-xl bg-white/5 border border-white/10"
+                className="p-2 text-[#064E3B] hover:text-[#059669] rounded-xl bg-emerald-50 border border-emerald-200"
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}

@@ -59,7 +59,7 @@ export default function HeroFullSwiper({ onOpenModal }: HeroFullSwiperProps) {
   const slide = SLIDES[current];
 
   return (
-    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#0A0E0F] pt-32 pb-24 border-b border-white/10">
+    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#051C14] pt-32 pb-24 border-b border-white/10">
 
       {/* FULL BLEED BACKGROUND SLIDER */}
       <div className="absolute inset-0 z-0">
@@ -81,8 +81,8 @@ export default function HeroFullSwiper({ onOpenModal }: HeroFullSwiperProps) {
             />
 
             {/* Dark Layered Vignette Overlays for Maximum Legibility & Clean Visuals */}
-            <div className="absolute inset-0 bg-[#0A0E0F]/75 backdrop-blur-[1px]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E0F] via-transparent to-[#0A0E0F]/80" />
+            <div className="absolute inset-0 bg-[#051C14]/80 backdrop-blur-[1px]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#051C14] via-transparent to-[#051C14]/85" />
             <div
               className="pointer-events-none absolute inset-0 opacity-30"
               style={{
@@ -100,7 +100,7 @@ export default function HeroFullSwiper({ onOpenModal }: HeroFullSwiperProps) {
 
         {/* Top Badges & Eyebrow */}
         <div className="flex flex-wrap items-center gap-3 mb-8">
-          <span className="px-3.5 py-1 rounded-full bg-[#FFE600] text-[#0A0E0F] font-mono text-[11px] font-extrabold uppercase shadow-lg">
+          <span className="px-3.5 py-1 rounded-full bg-[#059669] text-white font-mono text-[11px] font-extrabold uppercase shadow-lg">
             {slide.badge}
           </span>
         </div>
@@ -123,10 +123,10 @@ export default function HeroFullSwiper({ onOpenModal }: HeroFullSwiperProps) {
               <h1 className="font-extrabold text-[10vw] sm:text-[6vw] lg:text-[4.6vw] uppercase leading-[0.94] tracking-tight text-white">
                 {slide.headlineLine1}
                 <br />
-                <span className="text-[#FFE600]">{slide.headlineLine2}</span>
+                <span className="text-[#10B981]">{slide.headlineLine2}</span>
               </h1>
 
-              <p className="max-w-[640px] text-base sm:text-lg leading-[170%] text-slate-300 font-normal pt-2">
+              <p className="max-w-[640px] text-base sm:text-lg leading-[170%] text-emerald-100 font-normal pt-2">
                 {slide.subtitle}
               </p>
             </motion.div>
@@ -136,7 +136,7 @@ export default function HeroFullSwiper({ onOpenModal }: HeroFullSwiperProps) {
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <a
               href="#courses"
-              className="px-8 py-4 rounded-full bg-[#FFE600] hover:bg-yellow-300 text-[#0A0E0F] font-extrabold text-xs sm:text-sm flex items-center gap-2 shadow-2xl transition-all hover:scale-105"
+              className="px-8 py-4 rounded-full bg-[#059669] hover:bg-[#047857] text-white font-extrabold text-xs sm:text-sm flex items-center gap-2 shadow-2xl transition-all hover:scale-105"
             >
               <span>Explore Courses & Engagements</span>
               <HiArrowRight className="text-base" />

@@ -6,24 +6,24 @@ export default function StatsBar() {
   const stats = [
     {
       icon: FaBrain,
-      number: "50+",
+      number: "30+",
       label: "AI & Digital Solutions",
       sub: "Deployed locally & globally",
-      color: "text-[#00FF87]",
+      color: "text-[#059669]",
     },
     {
       icon: FaGraduationCap,
-      number: "12,000+",
+      number: "1,500+",
       label: "Students & Kids Empowered",
       sub: "Through hands-on training",
-      color: "text-[#FFE600]",
+      color: "text-[#059669]",
     },
     {
       icon: FaBuilding,
-      number: "45+",
+      number: "20+",
       label: "Partner Schools & Firms",
       sub: "EdTech & R&D collaboration",
-      color: "text-[#00FF87]",
+      color: "text-[#059669]",
     },
     {
       icon: FaAward,
