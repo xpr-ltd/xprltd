@@ -101,7 +101,6 @@ export default function Footer() {
 
             <div className="pt-2 space-y-1 text-xs text-slate-400 font-mono">
               <p>Email: <a href="mailto:xprng.ltd@gmail.com" className="text-[#10B981] hover:underline">xprng.ltd@gmail.com</a></p>
-              <p>Port Harcourt, Lagos & Abuja, Nigeria</p>
             </div>
           </div>
 

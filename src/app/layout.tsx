@@ -30,8 +30,11 @@ export const metadata: Metadata = {
     "Transformative Technology Hub Africa",
   ],
   icons: {
-    icon: "/images/logo_main.png",
-    shortcut: "/images/logo_main.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/images/logo_main.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
     apple: "/images/logo_main.png",
   },
   authors: [{ name: "Xpr Technologies Limited" }],
